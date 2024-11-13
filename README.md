@@ -28,3 +28,67 @@ si te sale error es por que ya lo tiene
 ![Captura desde 2024-10-30 13-07-27](https://github.com/user-attachments/assets/5d0019c4-930d-4dd6-8caa-78a8c794f853)
 
 ![Captura desde 2024-10-30 13-07-52](https://github.com/user-attachments/assets/6e445810-4768-479c-9f2d-dccf0c56739a)
+
+a continuacion tienes que poner esto en la terminal
+
+```console
+CREATE DATABASE bbdd;
+```
+
+```console
+CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+```
+
+```console
+GRANT ALL ON bbdd.* to 'usuario'@'localhost';
+```
+este comando es para salir del terminal de mysql
+```console
+exit
+```
+
+esto lo que hace es entrar a otra terminal i crear tu cuenta de localhost y de owncloud
+si te sale error por que ya lo tienes
+
+con estos comandos te extraen el archivo zip del owncloud 
+ahora tienes que poner esto en tu terminal
+```console
+sudo cp ~/Bajadas/app-web.zip /var/www/html
+```
+Vaya al directorio `/var/www/html`
+```console
+cd /var/www/html
+````
+Descomprima el archivo que ha descargado
+```console
+sudo unzip app-web.zip
+````
+Copie los archivos en la carpeta `/var/www/html`, modifique `app-web` por el nombre del directorio donde se ha descomprimido su archivo.
+```console
+sudo cp -R app-web/. /var/www/html
+````
+Eliminamos la carpeta creada cuando hemos hecho un `zip`
+```console
+sudo rm -rf app-web/
+````
+
+## Eliminamos el archivo `index.html` de `apache2`
+```console
+sudo rm -rf /var/www/html/index.html
+````
+
+
+## Aplicación de permisos en nuestras aplicaciones web
+Una vez descomprimidos los archivos de la aplicación web en el directorio `/var/www/html`, aplicamos los siguientes permisos en el directorio `/var/www/html`
+
+```console
+cd /var/www/html
+````
+```console
+sudo chmod-R 775 .
+````
+```console
+sudo chown -R usuario:www-data .
+````
+
+si te sale error en el owncloud coge todo lo metetes a la papelera i refrescas la pantalla y cuando salga archivo no encontrado lo vuelves a poner todo i se arreglara
