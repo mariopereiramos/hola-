@@ -50,6 +50,55 @@ exit
 esto lo que hace es entrar a otra terminal i crear tu cuenta de localhost y de owncloud
 si te sale error por que ya lo tienes
 
+ahora toca poner estos comandos
+esto lo que sirve es de instalar la versión 7.4 de PHP
+
+Instale los requisitos previos de PPA:
+```bash
+sudo apt install software-properties-common -y
+````
+
+Instala las herramientas necesarias para trabajar con los archivos de paquetes personales (PPA).
+```bash
+LC_ALL=C.UTF-8 sudo add-apt-repository ppa:ondrej/php -y
+````
+
+Actualiza ahora los repositorios:
+```bash
+sudo apt update
+````
+
+Instala las librerías de PHP de la versión 7.4
+```bash
+sudo apt install php7.4 -y
+````
+```bash
+sudo apt install -y php libapache2-mod-php7.4
+````
+
+```bash
+sudo apt install -y php7.4-fpm php7.4-common php7.4-mbstring php7.4-xmlrpc php7.4-soap php7.4-gd php7.4-xml php7.4-intl php7.4-mysql php7.4-cli php7.4-ldap php7.4-zip php7.4-curl
+````
+
+Seleccione la versión de PHP que desea:
+```bash
+sudo update-alternatives --config php
+````
+
+Activa los módulos de apache2 necesarios:
+```bash
+sudo a2enmod proxy_fcgi setenvif
+````
+
+```bash
+sudo a2enconf php7.4-fpm
+````
+
+Reinicie el apache2:
+```bash
+sudo service apache2 restart
+````
+
 con estos comandos te extraen el archivo zip del owncloud 
 ahora tienes que poner esto en tu terminal
 ```console
@@ -72,14 +121,13 @@ Eliminamos la carpeta creada cuando hemos hecho un `zip`
 sudo rm -rf app-web/
 ````
 
-## Eliminamos el archivo `index.html` de `apache2`
+Eliminamos el archivo `index.html` de `apache2`
 ```console
 sudo rm -rf /var/www/html/index.html
 ````
 
 
 ## Aplicación de permisos en nuestras aplicaciones web
-Una vez descomprimidos los archivos de la aplicación web en el directorio `/var/www/html`, aplicamos los siguientes permisos en el directorio `/var/www/html`
 
 ```console
 cd /var/www/html
@@ -92,3 +140,7 @@ sudo chown -R usuario:www-data .
 ````
 
 si te sale error en el owncloud coge todo lo metetes a la papelera i refrescas la pantalla y cuando salga archivo no encontrado lo vuelves a poner todo i se arreglara
+
+ahora tienes que poner un usuario i una contraseña i abajo te va poner nombre de la base de datos i es usuario i contraseña password y nombre de la base de datos bbdd
+
+fin
