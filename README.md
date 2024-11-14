@@ -1,23 +1,19 @@
 manual como poner el OwnCloud en linux
 
-1 abre tu historial
+1. abre linux
 
-2.busca portugal
+2.abre terminal
 
-3. abre linux
-
-4.abre terminal
-
-5.pon esto en tu terminal
+3.pon esto en tu terminal
 
 ![Captura desde 2024-10-30 12-37-24](https://github.com/user-attachments/assets/87c3321c-8ad8-4f46-be68-b37e6c7ade41)
 (![Captura desde 2024-10-30 12-37-37](https://github.com/user-attachments/assets/dcabf4f2-2287-4c88-a1fc-c21e8d48ae2a)
 
 si te sale error es por que ya lo tiene
 
-6.esperar tardara 6min
+4.esperar tardara 6min
 
-7.pon el siguiente paso
+5.pon el siguiente paso
 
 [![Captura desde 2024-10-30 13-06-37](https://github.com/user-attachments/assets/aad9c972-7e9f-4473-9787-9f166369bdca)
 
@@ -29,7 +25,7 @@ si te sale error es por que ya lo tiene
 
 ![Captura desde 2024-10-30 13-07-52](https://github.com/user-attachments/assets/6e445810-4768-479c-9f2d-dccf0c56739a)
 
-a continuacion tienes que poner esto en la terminal
+6.a continuacion tienes que poner esto en la terminal
 
 ![Captura desde 2024-11-14 13-10-00.png](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2012-47-23.png)
 
@@ -41,7 +37,7 @@ a continuacion tienes que poner esto en la terminal
 esto lo que hace es entrar a otra terminal i crear tu cuenta de localhost y de owncloud
 si te sale error por que ya lo tienes
 
-ahora toca poner estos comandos
+7.ahora toca poner estos comandos
 esto lo que sirve es de instalar la versión 7.4 de PHP
 
 ![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2012-56-21.png)
@@ -63,7 +59,7 @@ esto lo que sirve es de instalar la versión 7.4 de PHP
 ![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2013-02-51.png)
 
 con estos comandos te extraen el archivo zip del owncloud 
-ahora tienes que poner esto en tu terminal
+8.ahora tienes que poner esto en tu terminal
 
 ![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2013-05-30.png)
 
@@ -79,7 +75,7 @@ cd /var/www/html
 
 ![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2013-08-14.png)
 
-estos comandos lo que hace es darte acceso a var/www/html
+9.estos comandos lo que hace es darte acceso a var/www/html
 
 ```console
 cd /var/www/html
