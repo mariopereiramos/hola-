@@ -31,21 +31,12 @@ si te sale error es por que ya lo tiene
 
 a continuacion tienes que poner esto en la terminal
 
-```console
-CREATE DATABASE bbdd;
-```
+![Captura desde 2024-11-14 13-10-00.png](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2012-47-23.png)
 
-```console
-CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-```
+![Captura desde 2024-11-14 13-10-00.png](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2012-48-49.png)
 
-```console
-GRANT ALL ON bbdd.* to 'usuario'@'localhost';
-```
-este comando es para salir del terminal de mysql
-```console
-exit
-```
+![Captura desde 2024-11-14 12-50-17.png](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2012-50-17.png)
+
 
 esto lo que hace es entrar a otra terminal i crear tu cuenta de localhost y de owncloud
 si te sale error por que ya lo tienes
@@ -53,91 +44,50 @@ si te sale error por que ya lo tienes
 ahora toca poner estos comandos
 esto lo que sirve es de instalar la versión 7.4 de PHP
 
-Instale los requisitos previos de PPA:
-```bash
-sudo apt install software-properties-common -y
-````
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2012-56-21.png)
 
-Instala las herramientas necesarias para trabajar con los archivos de paquetes personales (PPA).
-```bash
-LC_ALL=C.UTF-8 sudo add-apt-repository ppa:ondrej/php -y
-````
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2012-56-21_1.png)
 
-Actualiza ahora los repositorios:
-```bash
-sudo apt update
-````
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2012-57-03.png)
 
-Instala las librerías de PHP de la versión 7.4
-```bash
-sudo apt install php7.4 -y
-````
-```bash
-sudo apt install -y php libapache2-mod-php7.4
-````
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2012-57-03.png)
 
-```bash
-sudo apt install -y php7.4-fpm php7.4-common php7.4-mbstring php7.4-xmlrpc php7.4-soap php7.4-gd php7.4-xml php7.4-intl php7.4-mysql php7.4-cli php7.4-ldap php7.4-zip php7.4-curl
-````
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2012-57-03_1.png)
 
-Seleccione la versión de PHP que desea:
-```bash
-sudo update-alternatives --config php
-````
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2012-57-58.png)
 
-Activa los módulos de apache2 necesarios:
-```bash
-sudo a2enmod proxy_fcgi setenvif
-````
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2012-58-57.png)
 
-```bash
-sudo a2enconf php7.4-fpm
-````
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2013-00-56.png)
 
-Reinicie el apache2:
-```bash
-sudo service apache2 restart
-````
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2013-02-51.png)
 
 con estos comandos te extraen el archivo zip del owncloud 
 ahora tienes que poner esto en tu terminal
-```console
-sudo cp ~/Bajadas/app-web.zip /var/www/html
-```
+
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2013-05-30.png)
+
 Vaya al directorio `/var/www/html`
 ```console
 cd /var/www/html
 ````
-Descomprima el archivo que ha descargado
-```console
-sudo unzip app-web.zip
-````
-Copie los archivos en la carpeta `/var/www/html`, modifique `app-web` por el nombre del directorio donde se ha descomprimido su archivo.
-```console
-sudo cp -R app-web/. /var/www/html
-````
-Eliminamos la carpeta creada cuando hemos hecho un `zip`
-```console
-sudo rm -rf app-web/
-````
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2013-06-29.png)
 
-Eliminamos el archivo `index.html` de `apache2`
-```console
-sudo rm -rf /var/www/html/index.html
-````
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2013-07-27.png)
 
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2013-06-29.png)
 
-## Aplicación de permisos en nuestras aplicaciones web
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2013-08-14.png)
+
+estos comandos lo que hace es darte acceso a var/www/html
 
 ```console
 cd /var/www/html
 ````
-```console
-sudo chmod-R 775 .
-````
-```console
-sudo chown -R usuario:www-data .
-````
+
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2013-09-20.png)
+
+![](https://github.com/mariopereiramos/hola-/blob/main/Captura%20desde%202024-11-14%2013-10-00.png)
 
 si te sale error en el owncloud coge todo lo metetes a la papelera i refrescas la pantalla y cuando salga archivo no encontrado lo vuelves a poner todo i se arreglara
 
